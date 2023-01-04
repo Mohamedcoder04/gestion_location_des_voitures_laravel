@@ -32,21 +32,7 @@ class LocationComp extends Component
     public $editLocationOldValues = [];
 
 
-    /**protected function rules () {
-        return [
-            
-            "editVoiture.titre" => ["required", Rule::unique("voitures", "titre")->ignore($this->editVoiture["id"])],
-            "editVoiture.matricule" => ["required", Rule::unique("voitures", "matricule")->ignore($this->editVoiture["id"])],
-            
-            "editVoiture.modele" => "required",
-            "editVoiture.kilometrage" => "required",
-            "editVoiture.nbrPlace" => "required",
-            "editVoiture.description" => "required",
-            "editVoiture.prix" => "required",
-            'editVoiture.type_voiture_id' => 'required|exists:App\Models\TypeVoiture,id',
-
-        ];
-    } **/
+    
 
     public function render()
     {
@@ -55,9 +41,6 @@ class LocationComp extends Component
 
         $locationQuery = Location::query();
 
-        /**if($this->editVoiture != []){
-            $this->showUpdateButton();
-        }**/
         if ($this->search != "") {
             $this->resetPage();
             $locationQuery->where("titre", "LIKE", "%" . $this->search . "%")

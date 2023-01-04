@@ -62,7 +62,7 @@
                     <td class="text-center">{{$location->voiture->titre}}</td>
                     <td class="text-center">{{$location->dateDebut}}</td>
                     <td class="text-center">{{$location->dateFin}}</td>
-                    <td class="text-center">-------</td>
+                    <td class="text-center">{{ (((strtotime($location->dateFin) - strtotime($location->dateDebut)))*$location->voiture->prix)/86400 }} DHS</td>
                     
   
                     <td class="text-center">

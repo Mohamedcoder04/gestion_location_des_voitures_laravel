@@ -15,8 +15,8 @@ class CreateLocationsTable extends Migration
     {
         Schema::create('locations', function (Blueprint $table) {
             $table->id();
-            $table->dateTime("dateDebut");
-            $table->dateTime("dateFin");
+            $table->date("dateDebut");
+            $table->date("dateFin");
             $table->foreignId("client_id")->constrained();
             $table->foreignId("voiture_id")->constrained();
             $table->timestamps();
