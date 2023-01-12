@@ -6,8 +6,6 @@ La solution permet notamment :
 
 -   Gestion clientèle;
 -   Gestion des locations des voitures
--   Gestion des recouvrement;
--   Le reporting
 
 ## License
 
